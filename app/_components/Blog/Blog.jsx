@@ -12,47 +12,44 @@ function Blog() {
         <div className={styles.blogGrid}>
           <Card>
             <Card.Thumbnail>
-              <Image fill src="/bg.png" alt="" />
+              <Image fill src="/carnaval.png" alt="" />
             </Card.Thumbnail>
             <Card.Description className={styles.blogDescriptionContainer}>
-              <h2 className={styles.blogHeading}>Bed Room</h2>
-              <p className={styles.blogLabel}>The standard chunck</p>
+              <h2 className={styles.blogHeading}>🎭 Carnaval de Cajamarca</h2>
+              <p className={styles.blogLabel}>Tradición y alegría en febrero</p>
               <p className={styles.blogDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veniam fugiat vero nesciunt iste laborum
-                pariatur voluptatum sed. Cumque nulla officiis repellendus dolorum fugit et dolores doloribus. Earum,
-                est quo!
-              </p>
-            </Card.Description>
-          </Card>
-          <Card>
-            <Card.Thumbnail>
-              <Image fill src="/bg.png" alt="" />
-            </Card.Thumbnail>
-            <Card.Description className={styles.blogDescriptionContainer}>
-              <h2 className={styles.blogHeading}>Bed Room</h2>
-              <p className={styles.blogLabel}>The standard chunck</p>
-              <p className={styles.blogDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veniam fugiat vero nesciunt iste laborum
-                pariatur voluptatum sed. Cumque nulla officiis repellendus dolorum fugit et dolores doloribus. Earum,
-                est quo!
+                El carnaval más vibrante del Perú, con comparsas, música, pintura y cultura viva en cada rincón de la ciudad.
               </p>
             </Card.Description>
           </Card>
 
           <Card>
             <Card.Thumbnail>
-              <Image fill src="/bg.png" alt="" />
+              <Image fill src="/granja.png" alt="" />
             </Card.Thumbnail>
             <Card.Description className={styles.blogDescriptionContainer}>
-              <h2 className={styles.blogHeading}>Bed Room</h2>
-              <p className={styles.blogLabel}>The standard chunck</p>
+              <h2 className={styles.blogHeading}>🌲 Heading: Granja Porcón</h2>
+              <p className={styles.blogLabel}>Turismo rural y sostenible</p>
               <p className={styles.blogDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veniam fugiat vero nesciunt iste laborum
-                pariatur voluptatum sed. Cumque nulla officiis repellendus dolorum fugit et dolores doloribus. Earum,
-                est quo!
+                Bosques, animales y talleres artesanales en una experiencia comunitaria a solo minutos de Cajamarca.
               </p>
             </Card.Description>
           </Card>
+
+          <Card>
+            <Card.Thumbnail>
+              <Image fill src="/baños.png" alt="" />
+            </Card.Thumbnail>
+            <Card.Description className={styles.blogDescriptionContainer}>
+              <h2 className={styles.blogHeading}>🏞️ Baños del Inca</h2>
+              <p className={styles.blogLabel}>Relajo con historia</p>
+              <p className={styles.blogDescription}>
+                Piscinas termales privadas y tratamientos naturales en el mismo lugar que usó el Inca Atahualpa.
+              </p>
+            </Card.Description>
+          </Card>
+
+          
         </div>
       </div>
     </section>
