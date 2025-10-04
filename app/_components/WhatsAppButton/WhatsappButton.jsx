@@ -34,6 +34,9 @@ export default function WhatsAppButton() {
                         avatar='/icon.png'
                         notification
                         notificationSound
+                        placeholder='Escriba una respuesta...'
+                        statusMessage="Responde en menos de 1 hora"
+                        onClick={() => console.log("click whatsapp chat")}
                     />
                 </motion.div>
             )}
