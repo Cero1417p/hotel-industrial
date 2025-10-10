@@ -1,22 +1,33 @@
 import Heading from "@/app/_ui/Heading";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { getAllRooms } from "@/app/_lib/supabase/rooms";
-const SUPABASE_ROOMS_URL = process.env.NEXT_PUBLIC_SUPABASE_IMGS_URL;
+
+// Lista estática de imágenes
+const STATIC_IMAGES = [
+  "lobby.jpg",
+  "habitacion-10.jpg",
+  "habitacion-4.jpg",
+  "habitacion-11.jpg",
+  "habitacion-6.jpg",
+];
+
+// Asegúrate de que esta URL apunte a tu bucket público en Supabase o donde estén alojadas las imágenes
+const SUPABASE_ROOMS_URL = process.env.NEXT_PUBLIC_SUPABASE_IMGS_URL || "";
+
 async function Gallery() {
-  const rooms = await getAllRooms();
 
-  console.log("rooms", rooms);
-
-  rooms.length = 8;
   return (
     <section className={styles.gallerySection}>
       <div className="container">
-        <Heading className="text-center">Gallery</Heading>
+        <Heading className="text-center">Galería de imagenes</Heading>
         <div className={styles.galleryGrid}>
-          {rooms.map((item) => (
-            <div key={item.id} className={styles.thumbnail}>
-              <Image fill src={`${SUPABASE_ROOMS_URL}/${item.thumbnail}`} alt="" />
+          {STATIC_IMAGES.map((imageName, index) => (
+            <div key={index} className={styles.thumbnail}>
+              <Image
+                fill
+                src={`${SUPABASE_ROOMS_URL}/${imageName}`}
+                alt={`Habitación ${index + 1}`}
+              />
             </div>
           ))}
         </div>
