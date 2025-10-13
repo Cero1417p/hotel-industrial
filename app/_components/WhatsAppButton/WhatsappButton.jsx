@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
                     style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 9999 }}
                 >
                     <FloatingWhatsApp
-                        phoneNumber="+51950049344"
+                        phoneNumber="+51987131053"
                         accountName="Hostal Industrial"
                         chatMessage="Hola 👋 ¿Quieres reservar una habitación?"
                         avatar='/icon.png'

@@ -94,8 +94,7 @@ export default function Map({ initialCenter, center }) {
         popupContent={
           <>
             <strong>HOSTAL INDUSTRIAL</strong>. <br />
-            Av. Industrial N° 755. <br />
-            Cel. 950 049 344
+            Av. Industrial N° 755.
           </>
         }
       />

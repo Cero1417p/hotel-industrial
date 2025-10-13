@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 const CONTACT_INFO = {
   email: "email@gmail.com",
-  phone: "+212 6 77 88 99 00",
+  phone: "+51 987 131 053",
   address: "Av.  Industrial N° 755.",
 };
 
@@ -14,7 +14,7 @@ const MENU_LINKS = [
   { href: "/signin", label: "Área de Huespedes" },
 ];
 
-const NEWSLETTER_PLACEHOLDER = "example@mail.com";
+const NEWSLETTER_PLACEHOLDER = "zamora.consultas@gmail.com";
 const NEWSLETTER_BUTTON_TEXT = "ENVIAR";
 
 function Footer() {

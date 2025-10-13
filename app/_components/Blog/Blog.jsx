@@ -7,7 +7,7 @@ function Blog() {
     <section className={styles.blogSection}>
       <div className="container">
         <Heading className={styles.heading}>Blog</Heading>
-        <p className={styles.description}>Lorem Ipsum is available, but the majority have suffered</p>
+        <p className={styles.description}>Habitaciones cómodas y equipadas para tu descanso en Cajamarca.</p>
 
         <div className={styles.blogGrid}>
           <Card>
