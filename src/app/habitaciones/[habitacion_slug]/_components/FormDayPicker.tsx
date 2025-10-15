@@ -11,14 +11,14 @@ import Loader from "@/ui/Loader";
 
 interface FormDayPickerProps {
   handleDateSelection: (range: DateRange | undefined) => void;
-  start: Date | undefined;
-  end: Date | undefined;
+  //start: Date | undefined;
+  //end: Date | undefined;
 }
 
 function FormDayPicker({
   handleDateSelection,
-  start,
-  end,
+  //start,
+  //end,
 }: FormDayPickerProps) {
   const [disabledDays, setDisabledDays] = useState<Date[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);

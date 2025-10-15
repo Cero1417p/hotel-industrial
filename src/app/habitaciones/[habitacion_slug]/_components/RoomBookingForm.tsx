@@ -8,6 +8,7 @@ import ReservationButton from "./ReservationButton";
 import { useActionState, useCallback, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { siteConfig } from "@/config/site";
+import { DateRange } from "react-day-picker";
 
 const initialState = {
   dateError: "",
@@ -37,7 +38,7 @@ export default function RoomBookingForm({
   const [guests, setGuests] = useState("");
 
   const handleDateSelection = useCallback(
-    (range: { from?: Date; to?: Date }) => {
+    (range:DateRange | undefined) => {
       if (!range?.from || !range?.to) return;
       const from = formatISO(range.from, { representation: "date" });
       const to = formatISO(range.to, { representation: "date" });
@@ -66,7 +67,7 @@ export default function RoomBookingForm({
     newForm.set("end_date", endDate);
     newForm.set("guests_count", guests);
     newForm.set("room_id", room.id);
-    formAction(newForm);
+    //formAction(newForm);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -123,7 +124,6 @@ export default function RoomBookingForm({
         {/* Calendario */}
         <div>
           <FormDayPicker
-            endDate={endDate}
             handleDateSelection={handleDateSelection}
           />
         </div>

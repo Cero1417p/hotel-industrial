@@ -78,7 +78,8 @@ export default function RootLayout({
           zIndex={1600}
           showAtBottom={false}
         />
-        <Navbar user={session?.user} signOutAction={signOutAction} />
+        <Navbar //user={session?.user} signOutAction={signOutAction} 
+        />
         <main>{children}</main>
         <Footer />
         <WhatsappButton />

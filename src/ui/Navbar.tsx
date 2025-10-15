@@ -39,7 +39,9 @@ const GUEST_AREA: NavItem = {
   match: (path) => path.includes("account") || path === "/signin",
 };
 
-export default function Navbar({ user, signOutAction }: NavbarProps) {
+export default function Navbar(
+  //{ user, signOutAction }: NavbarProps
+  ) {
   const [hideMenu, setHideMenu] = useState(true);
   const pathname = usePathname();
 
