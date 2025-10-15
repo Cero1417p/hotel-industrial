@@ -7,12 +7,6 @@ import Facilities from "./Facilities";
 import BookingPolicy from "./BookingPolicy";
 import { getRoomBySlug } from "@/lib/supabase/rooms";
 
-const mockImages = [
-  "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
-  "https://images.unsplash.com/photo-1596394516093-501504a8e93e?w=800",
-  "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
-];
-
 interface RoomContainerProps {
   habitacion_slug: string;
 }
@@ -29,55 +23,55 @@ async function RoomContainer({ habitacion_slug }: RoomContainerProps) {
     return <div>Error: {error.message}</div>;
   }
 
-  function bookingAction(prevState: any, formData: FormData) {
-    //"use server";
+//   function bookingAction(prevState: any, formData: FormData) {
+//     //"use server";
 
-    prevState = { ...prevState, isBooking: true };
-    const start_date = formData.get("start_date") as string;
-    const end_date = formData.get("end_date") as string;
-    const guests_count = parseInt(formData.get("guests_count") as string);
-    const room_id = formData.get("room_id") as string;
+//     prevState = { ...prevState, isBooking: true };
+//     const start_date = formData.get("start_date") as string;
+//     const end_date = formData.get("end_date") as string;
+//     const guests_count = parseInt(formData.get("guests_count") as string);
+//     const room_id = formData.get("room_id") as string;
 
-    // Simple validation
-    if (
-      !start_date ||
-      !end_date ||
-      !guests_count ||
-      guests_count < 1 ||
-      guests_count > room.capacity
-    ) {
-      return {
-        ...prevState,
-        isBooking: false,
-        criticalError: "Invalid form data",
-      };
-    }
+//     // Simple validation
+//     if (
+//       !start_date ||
+//       !end_date ||
+//       !guests_count ||
+//       guests_count < 1 ||
+//       guests_count > room.capacity
+//     ) {
+//       return {
+//         ...prevState,
+//         isBooking: false,
+//         criticalError: "Invalid form data",
+//       };
+//     }
 
-    // Mock successful booking
-    //redirect(`/reservations/checkout`);
+//     // Mock successful booking
+//     //redirect(`/reservations/checkout`);
 
-    // Construir el mensaje para WhatsApp
-    const message = `Hola, me gustaría reservar la habitación *${
-      room.name
-    }* con los siguientes datos:
+//     // Construir el mensaje para WhatsApp
+//     const message = `Hola, me gustaría reservar la habitación *${
+//       room.name
+//     }* con los siguientes datos:
 
-📅 *Fechas:* del ${start_date} al ${end_date}
-👥 *Huéspedes:* ${guests_count}
-💰 *Precio por noche:* $${room.price.toLocaleString("es-MX")}
+// 📅 *Fechas:* del ${start_date} al ${end_date}
+// 👥 *Huéspedes:* ${guests_count}
+// 💰 *Precio por noche:* $${room.price.toLocaleString("es-MX")}
 
-¿Está disponible? ¡Gracias!`;
+// ¿Está disponible? ¡Gracias!`;
 
-    // Codificar el mensaje para la URL
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+//     // Codificar el mensaje para la URL
+//     const encodedMessage = encodeURIComponent(message);
+//     const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
 
-    // No puedes usar window.open en server-side
-    return {
-      ...prevState,
-      isBooking: false,
-      whatsappUrl,
-    };
-  }
+//     // No puedes usar window.open en server-side
+//     return {
+//       ...prevState,
+//       isBooking: false,
+//       whatsappUrl,
+//     };
+//   }
 
   return (
     <>
