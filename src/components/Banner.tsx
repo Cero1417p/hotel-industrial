@@ -4,12 +4,16 @@ interface BannerProps {
   height?: number;
 }
 
-export default function Banner({ title, image,height=70 }: BannerProps) {
+export default function Banner({ title, image="/fachada-1.png",height=70 }: BannerProps) {
   const heightClass = `h-[${height}vh]`;
+  console.log("heightClass: ",heightClass)
   return (
     <div
-      className={`w-full ${heightClass} bg-cover bg-center`}
-      style={{ backgroundImage: image ? `url('${image}')` :"url('/bg.png')"  }}
+      className={`w-full bg-cover bg-center`}
+      style={{ 
+        height: `${height}vh`,
+        backgroundImage: `url('${image}')` 
+      }}
     >
       <div className="w-full h-full backdrop-brightness-20 flex items-center justify-center">
         <h1 className="text-white text-3xl font-bold text-center tracking-wider relative">
