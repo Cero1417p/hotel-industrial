@@ -1,24 +1,21 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
-import { AnimatePresence, motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
-import { siteConfig } from '@/config/site';
+import { useEffect, useState } from "react";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { AnimatePresence, motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import { siteConfig } from "@/config/site";
 
 function WhatsAppButton() {
-  const [showButton, setShowButton] = useState<boolean>(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 200;
-      setShowButton(window.scrollY > scrollThreshold);
-    };
+    const delay = 2500;
+    const timer = setTimeout(() => {
+      setShowButton(true);
+    }, delay);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -30,7 +27,7 @@ function WhatsAppButton() {
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
           style={{
-            position: 'fixed',
+            position: "fixed",
             bottom: 20,
             right: 20,
             zIndex: 9999,
@@ -45,7 +42,7 @@ function WhatsAppButton() {
             notificationSound
             placeholder="Escriba una respuesta..."
             statusMessage="Responde en menos de 1 hora"
-            onClick={() => console.log('click whatsapp chat')}
+            onClick={() => console.log("click whatsapp chat")}
           />
         </motion.div>
       )}
