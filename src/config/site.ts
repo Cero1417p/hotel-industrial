@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
     description: 'Somos una empresa dedicada a hacer cosas increíbles.',
     url: 'https://www.hostalindustrial.com',
     contact: {
-        email: 'hostalindustrial.info@gmail.com',
+        email: 'zamora.consultas@gmail.com',
         phone: '974173399',
         address: 'Av. Industrial N° 755 Cajamarca, Peru',
     },

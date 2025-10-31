@@ -23,7 +23,7 @@ function RoomItem({ id, imgPath, price, title, slug="Default" }: RoomItemProps) 
             href={`/habitaciones/${slug}`} 
             className="inline-block px-4 py-3 bg-primary no-underline text-white flex-shrink-0 transition-all duration-150 hover:bg-primary-hover"
           >
-            Desde ${price} / Noche
+            Desde S/. {price} / Noche
           </Link>
         </div>
       </div>

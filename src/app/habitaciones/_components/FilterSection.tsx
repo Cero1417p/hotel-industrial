@@ -35,13 +35,12 @@ function FilterSection({ filters }: FilterSectionProps) {
   };
   const [startDate, setStartDate] = useState<Date | null>(
     filters?.range && isValid(new Date(range.from!))
-      ? new Date(range.from!)
+      ? new Date(range.from!+"T00:00:00")
       : null
   );
   const [endDate, setEndDate] = useState<Date | null>(
-    filters?.range && isValid(new Date(range.to!)) ? new Date(range.to!) : null
+    filters?.range && isValid(new Date(range.to!)) ? new Date(range.to!+"T00:00:00") : null
   );
-
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();

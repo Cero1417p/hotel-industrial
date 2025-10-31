@@ -50,8 +50,8 @@ export default function Facilities() {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-6">
-      <Heading className="text-center">Facilities</Heading>
-      
+      <Heading className="text-center">Servicios de la habitación</Heading>
+
       <hr className="w-full max-w-[90px] h-0.5 mx-auto mt-3 mb-10 border-2 border-primary" />
       <table className="max-w-4xl m-auto w-full border-collapse text-gray-800">
         <tbody>
@@ -63,7 +63,10 @@ export default function Facilities() {
               {row.map((facility, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className={"w-1/2 px-8 py-3 text-gray-800 text-base border-b border-gray-200"+(cellIndex === 1 ? " border-l" : "")}
+                  className={
+                    "w-1/2 px-8 py-3 text-gray-800 text-base border-b border-gray-200" +
+                    (cellIndex === 1 ? " border-l" : "")
+                  }
                 >
                   <FacilityItem {...facility} />
                 </td>

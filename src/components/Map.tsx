@@ -15,7 +15,8 @@ import L from "leaflet";
 
 // 🔧 Fix para íconos en Next.js
 const DefaultIcon = L.Icon.Default;
-delete (DefaultIcon.prototype as unknown as Record<string, unknown>)._getIconUrl;
+delete (DefaultIcon.prototype as unknown as Record<string, unknown>)
+  ._getIconUrl;
 Icon.Default.mergeOptions({
   iconRetinaUrl:
     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
@@ -79,7 +80,7 @@ function ZoomResponsiveMarker({
   const scale = Math.max(zoom / 13, baseScale);
   const [w, h] = iconSizeBase;
   const iconSize: [number, number] = [w * scale, h * scale];
-  const iconAnchor: [number, number] = [w / 2 * scale, h * scale];
+  const iconAnchor: [number, number] = [(w / 2) * scale, h * scale];
 
   const icon = new Icon({
     iconUrl,
@@ -95,8 +96,12 @@ function ZoomResponsiveMarker({
 }
 
 // 📍 Coordenadas
-const hotelPosition: LatLngExpression = [-7.179910761431965, -78.48695172910999];
-const hospitalPosition: LatLngExpression = [-7.183401453563929, -78.4879737441568];
+const hotelPosition: LatLngExpression = [
+  -7.179910761431965, -78.48695172910999,
+];
+const hospitalPosition: LatLngExpression = [
+  -7.183401453563929, -78.4879737441568,
+];
 
 // 🗺️ Componente principal del mapa
 interface MapProps {
@@ -127,7 +132,7 @@ export default function Map({ initialCenter, center }: MapProps) {
           <>
             <strong>HOSTAL INDUSTRIAL</strong>. <br />
             Av. Industrial N° 755. <br />
-            Cel. 950 049 344
+            Cel. 974 173 399
           </>
         }
       />
