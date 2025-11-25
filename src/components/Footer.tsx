@@ -11,7 +11,7 @@ import { siteConfig } from '@/config/site';
 const MENU_LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/habitaciones", label: "Habitaciones" },
-   { href: "/services", label: "Servicios" },
+   { href: "/servicios", label: "Servicios" },
   { href: "/contactanos", label: "Contáctanos" },
 ];
 
