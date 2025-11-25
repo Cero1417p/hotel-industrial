@@ -3,10 +3,24 @@ import RoomsSection from "./_components/RoomsSection";
 import { Suspense } from "react";
 import Loader from "@/ui/Loader";
 import FilterSection from "./_components/FilterSection";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Habitaciones",
-  description: "Descubre y reserva una habitación en hostal industrial",
+  description: "Descubre nuestras habitaciones en Hostal Industrial Cajamarca. Opciones cómodas y seguras con baño privado, agua caliente, WiFi y TV. Reserva la habitación perfecta para tu estadía en Cajamarca.",
+  keywords: [
+    "habitaciones cajamarca",
+    "reservar habitación cajamarca",
+    "cuartos hotel cajamarca",
+    "alojamiento económico cajamarca",
+    "habitaciones con baño privado cajamarca",
+    "hostal industrial habitaciones",
+  ],
+  openGraph: {
+    title: "Habitaciones - Hostal Industrial Cajamarca",
+    description: "Descubre nuestras habitaciones cómodas y seguras. Reserva ahora tu alojamiento en Cajamarca.",
+    images: ["/habitacion-generica.png"],
+  },
 };
 
 interface RoomsProps {

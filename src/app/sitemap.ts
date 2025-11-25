@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
- 
+
 const BASE_URL = 'https://hostalindustrial.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,26 +7,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${BASE_URL}/habitaciones`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/nosotros`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.3,
+      priority: 0.7,
     },
     {
       url: `${BASE_URL}/contactanos`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.8,
     },
   ]
 }

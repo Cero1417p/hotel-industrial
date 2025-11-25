@@ -1,0 +1,21 @@
+{
+  "name": "Hostal Industrial Cajamarca",
+  "short_name": "Hostal Industrial",
+  "description": "Hostal Industrial - Alojamiento cómodo y seguro en Cajamarca, Perú",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc143c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/hotel.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "hospitality"],
+  "lang": "es",
+  "dir": "ltr"
+}
